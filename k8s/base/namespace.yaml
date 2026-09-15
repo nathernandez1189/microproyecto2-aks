@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: microproyecto2
+  labels:
+    app.kubernetes.io/part-of: microproyecto2
+    pod-security.kubernetes.io/enforce: restricted
