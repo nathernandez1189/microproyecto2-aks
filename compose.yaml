@@ -1,0 +1,40 @@
+name: microproyecto2
+services:
+  classifier:
+    build:
+      context: .
+      dockerfile: apps/classifier/Dockerfile
+    image: mp2-classifier:v1
+    ports: ["127.0.0.1:8081:8000"]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 1g
+    cpus: 1
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/readyz')"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
+  planner:
+    build:
+      context: .
+      dockerfile: apps/planner/Dockerfile
+    image: mp2-planner:v1
+    ports: ["127.0.0.1:8082:8000"]
+    volumes: ["planner-data:/data"]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 256m
+    cpus: 0.5
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/readyz')"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+volumes:
+  planner-data:
