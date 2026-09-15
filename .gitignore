@@ -1,0 +1,27 @@
+# Configuración, sesiones y credenciales locales
+.env
+.env.*
+!.env.example
+.azure/
+.kube/
+.tools/
+.venv/
+venv/
+*.pem
+*.key
+# Datos y respaldos (nunca forman parte del código fuente)
+privadas/
+*.db*
+*.sqlite*
+tareas-respaldo.json
+# Archivos generados
+__pycache__/
+*.pyc
+.DS_Store
+build/
+output/
+tmp/
+# Solo se publican evidencias revisadas; los originales se conservan localmente
+evidencias/*
+!evidencias/README.md
+!evidencias/publicables/
