@@ -1,0 +1,43 @@
+{
+  "01-nodos-cli-20260914.txt": {
+    "origen_local": "evidencias/azure/08-nodos-reactivados.txt",
+    "sha256_original": "75fe6f8925c33f2007111ac828c2d6de80f623a6d58cccebf36a38d987663c18",
+    "sha256_publicado": "511d68dc7db38f8bdd998a3ae41f24b7de56b3af5766f6e72e4553aeef996386",
+    "tratamiento": "Rutas de usuario, IP internas y prefijo generado del pool ocultos; Cloud Shell: solo renglones de terminal. Resultados y fechas preservados."
+  },
+  "02-pruebas-aks-20260914.txt": {
+    "origen_local": "evidencias/azure/04-pruebas-aks.txt",
+    "sha256_original": "10994e1904b0bdf0a96082010662f33b85e62c82e579b50a428eb8d3526be36c",
+    "sha256_publicado": "5b1786790b106ace6699d305e6d82414e582774640e063094392f98be1360872",
+    "tratamiento": "Rutas de usuario, IP internas y prefijo generado del pool ocultos; Cloud Shell: solo renglones de terminal. Resultados y fechas preservados."
+  },
+  "03-hpa-ciclo-20260914.txt": {
+    "origen_local": "evidencias/local/03-hpa-ciclo.txt",
+    "sha256_original": "c85be7c811c160c9635b12a9c5f90e15dad9b5e13c3f1d5e870e06d5acc472df",
+    "sha256_publicado": "c85be7c811c160c9635b12a9c5f90e15dad9b5e13c3f1d5e870e06d5acc472df",
+    "tratamiento": "Rutas de usuario, IP internas y prefijo generado del pool ocultos; Cloud Shell: solo renglones de terminal. Resultados y fechas preservados."
+  },
+  "04-cloud-shell-20260909.txt": {
+    "origen_local": "evidencias/azure/01-nodos-cloud-shell.txt",
+    "sha256_original": "76f0b627eef7a705843e197b3118887293adb2a36c28fbd067c437f25bb73e04",
+    "sha256_publicado": "3bf46b909cb623b83584ad71182d90e313e22b8e7467c6df09dda0383ecd7630",
+    "tratamiento": "Rutas de usuario, IP internas y prefijo generado del pool ocultos; Cloud Shell: solo renglones de terminal. Resultados y fechas preservados."
+  },
+  "05-docker-http-20260909.txt": {
+    "origen_local": "evidencias/local/01-pruebas-http.txt",
+    "sha256_original": "2b8c4af31802aeb6f6e6ff9ae4ec632e660323deabd594cc02e3e165cfd1e94c",
+    "sha256_publicado": "2b8c4af31802aeb6f6e6ff9ae4ec632e660323deabd594cc02e3e165cfd1e94c",
+    "tratamiento": "Rutas de usuario, IP internas y prefijo generado del pool ocultos; Cloud Shell: solo renglones de terminal. Resultados y fechas preservados."
+  },
+  "06-resumen-monitoreo.json": {
+    "origen_local": "evidencias/azure/05-consulta-1.json a 05-consulta-4.json",
+    "tratamiento": "Conteos de filas por consulta; no incluye registros crudos ni identificadores de suscripción.",
+    "sha256_publicado": "e8be6a52afad1c68c1ed76000eb6784c99298b65581b74a259fab94efce42c3d"
+  },
+  "07-apagado-aks.json": {
+    "sha256_publicado": "fe790d646c999fff882d22ab5de0365a83e55d95ad316ea356a2e623568a79db",
+    "origen_local": "evidencias/azure/apagado-20260914/estado-aks.json",
+    "sha256_original": "413efd49e59b122c9fdad0b6e11707005f73a2f41661efd6c67172018a87b3e5",
+    "tratamiento": "Solo estados de energía y aprovisionamiento."
+  }
+}

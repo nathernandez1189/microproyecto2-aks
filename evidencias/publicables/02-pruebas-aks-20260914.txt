@@ -1,0 +1,58 @@
+{"pod":"planner-56c9c5cb6-tqtzd","status":"ready","storage":"sqlite"}
+{"classes":1000,"model":"MobileNetV3 Small","status":"ready"}
+
+2026-09-15T01:41:34Z
+test_invalid_image (test_http.ClassifierTests.test_invalid_image) ... ok
+test_metrics_include_predictions (test_http.ClassifierTests.test_metrics_include_predictions) ... ok
+test_missing_image (test_http.ClassifierTests.test_missing_image) ... ok
+test_oversized_upload (test_http.ClassifierTests.test_oversized_upload) ... ok
+test_readiness_model (test_http.ClassifierTests.test_readiness_model) ... ok
+test_real_inference_dog (test_http.ClassifierTests.test_real_inference_dog) ... ok
+test_crud (test_http.PlannerTests.test_crud) ... ok
+test_invalid_status_and_missing_task (test_http.PlannerTests.test_invalid_status_and_missing_task) ... ok
+test_readiness (test_http.PlannerTests.test_readiness) ... ok
+test_sql_special_characters_are_data (test_http.PlannerTests.test_sql_special_characters_are_data) ... ok
+test_ui_and_headers (test_http.PlannerTests.test_ui_and_headers) ... ok
+test_validation (test_http.PlannerTests.test_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 19.804s
+
+OK
+NAME                             READY   STATUS    RESTARTS   AGE     IP             NODE                                NOMINATED NODE   READINESS GATES
+pod/classifier-74999b7f6-2qcsw   1/1     Running   0          5d15h   IP_INTERNA   aks-agentpool-REDACTADO-vmss000003   <none>           <none>
+pod/classifier-74999b7f6-wg69w   1/1     Running   0          5d15h   IP_INTERNA   aks-agentpool-REDACTADO-vmss000003   <none>           <none>
+pod/planner-56c9c5cb6-tqtzd      1/1     Running   0          47s     IP_INTERNA    aks-agentpool-REDACTADO-vmss000003   <none>           <none>
+pod/planner-56c9c5cb6-w985w      0/1     Error     0          5d15h   IP_INTERNA   aks-agentpool-REDACTADO-vmss000002   <none>           <none>
+
+NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/planner-data   Bound    pvc-b5433686-82c5-4094-8d3e-a408e96c232e   1Gi        RWO            managed-csi    <unset>                 5d15h   Filesystem
+Pod UID anterior: d07b56f8-452d-4f7f-b865-1009e293c9bb
+deployment.apps/planner restarted
+Waiting for deployment "planner" rollout to finish: 0 of 1 updated replicas are available...
+deployment "planner" successfully rolled out
+{"pod":"planner-75845d4bd4-fgt7w","status":"ready","storage":"sqlite"}
+Pod UID nuevo: 30b8b012-2827-44e0-a3c1-76cd060d0fa4
+Volumen conservado: pvc-b5433686-82c5-4094-8d3e-a408e96c232e
+PASS: el nuevo Pod conserva la tarea en el mismo PVC: {'course': 'Computación en la Nube', 'created_at': '2026-09-15 01:41:55', 'id': 2, 'status': 'pendiente', 'title': 'Persistencia AKS verificada'}
+NAME                             READY   STATUS    RESTARTS   AGE     IP             NODE                                NOMINATED NODE   READINESS GATES
+pod/classifier-74999b7f6-2qcsw   1/1     Running   0          5d15h   IP_INTERNA   aks-agentpool-REDACTADO-vmss000003   <none>           <none>
+pod/classifier-74999b7f6-wg69w   1/1     Running   0          5d15h   IP_INTERNA   aks-agentpool-REDACTADO-vmss000003   <none>           <none>
+pod/planner-56c9c5cb6-w985w      0/1     Error     0          5d15h   IP_INTERNA   aks-agentpool-REDACTADO-vmss000002   <none>           <none>
+pod/planner-75845d4bd4-fgt7w     1/1     Running   0          16s     IP_INTERNA   aks-agentpool-REDACTADO-vmss000003   <none>           <none>
+
+NAME                                 STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE     VOLUMEMODE
+persistentvolumeclaim/planner-data   Bound    pvc-b5433686-82c5-4094-8d3e-a408e96c232e   1Gi        RWO            managed-csi    <unset>                 5d15h   Filesystem
+[pod/classifier-74999b7f6-2qcsw/classifier] [2026-09-15 01:40:35 +0000] [1] [INFO] Starting gunicorn 23.0.0
+[pod/classifier-74999b7f6-2qcsw/classifier] [2026-09-15 01:40:35 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[pod/classifier-74999b7f6-2qcsw/classifier] [2026-09-15 01:40:35 +0000] [1] [INFO] Using worker: gthread
+[pod/classifier-74999b7f6-2qcsw/classifier] [2026-09-15 01:40:35 +0000] [7] [INFO] Booting worker with pid: 7
+[pod/classifier-74999b7f6-wg69w/classifier] [2026-09-15 01:40:35 +0000] [7] [INFO] Booting worker with pid: 7
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/predict", "method": "POST", "status": 400, "duration_ms": 62.01, "request_id": "84a03c4f27454b10a75dc692f010429a", "pod": "classifier-74999b7f6-wg69w"}
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/predict", "method": "POST", "status": 400, "duration_ms": 0.81, "request_id": "797dfeb2f0eb45c49d25f6181c3644a9", "pod": "classifier-74999b7f6-wg69w"}
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/predict", "method": "POST", "status": 400, "duration_ms": 0.24, "request_id": "92806b6f456d49f1a613bcfdf69ae9b9", "pod": "classifier-74999b7f6-wg69w"}
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/predict", "method": "POST", "status": 413, "duration_ms": 0.18, "request_id": "44f39338e89c47ef9082ab913a625f4a", "pod": "classifier-74999b7f6-wg69w"}
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/predict", "method": "POST", "status": 200, "duration_ms": 1730.79, "request_id": "546d20c3ef524157bed23b4cdf7b3e78", "pod": "classifier-74999b7f6-wg69w"}
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/", "method": "GET", "status": 200, "duration_ms": 8.22, "request_id": "8f23950ebecb47c992c1604f82ba935d", "pod": "classifier-74999b7f6-wg69w"}
+[pod/classifier-74999b7f6-wg69w/classifier] {"event": "http_request", "app": "classifier", "path": "/predict", "method": "POST", "status": 200, "duration_ms": 3565.17, "request_id": "a16d67163b1d40439f4a0f0653c9c2ae", "pod": "classifier-74999b7f6-wg69w"}
+PASS: 12 pruebas HTTP y persistencia completadas en Azure AKS con Azure Disk.

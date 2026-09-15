@@ -1,0 +1,16 @@
+Fragmento de accesibilidad de la terminal Cloud Shell, 9 de septiembre de 2026.
+Se conservan los renglones de salida; saltos de línea originales del navegador.
+
+Merged "aks-microproyecto2" as current context in /home/USUARIO/.
+kube/config
+Wed Sep 9 10:16:03 AM UTC 2026
+NAME STATUS ROLES AGE VERSI
+ON INTERNAL-IP EXTERNAL-IP OS-IMAGE KERNEL-VERS
+ION CONTAINER-RUNTIME
+aks-agentpool-REDACTADO-vmss000000 Ready <none> 30m v1.35
+.7 IP_INTERNA <none> Ubuntu 24.04.4 LTS 6.8.0-1065-
+azure containerd://2.3.3-2
+aks-agentpool-REDACTADO-vmss000001 Ready <none> 30m v1.35
+.7 IP_INTERNA <none> Ubuntu 24.04.4 LTS 6.8.0-1065-
+azure containerd://2.3.3-2
+USUARIO [ ~ ]$

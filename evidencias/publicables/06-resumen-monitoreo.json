@@ -1,0 +1,22 @@
+{
+  "fecha_sesion_colombia": "2026-09-14",
+  "consultas": [
+    {
+      "consulta": 1,
+      "filas": 8
+    },
+    {
+      "consulta": 2,
+      "filas": 3
+    },
+    {
+      "consulta": 3,
+      "filas": 4
+    },
+    {
+      "consulta": 4,
+      "filas": 19
+    }
+  ],
+  "nota": "La consulta 4 recoge eventos Warning; no equivale a ausencia de problemas."
+}

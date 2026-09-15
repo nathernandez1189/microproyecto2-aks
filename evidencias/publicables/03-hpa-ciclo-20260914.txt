@@ -1,0 +1,175 @@
+FASE 1: Antes de la carga
+2026-09-15T01:45:33Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+job.batch/load-generator patched
+FASE 2: Esperar aumento automático a cuatro réplicas disponibles
+2026-09-15T01:45:34Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+2026-09-15T01:45:44Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+2026-09-15T01:45:54Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+2026-09-15T01:46:04Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+2026-09-15T01:46:14Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+2026-09-15T01:46:24Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 2%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+2026-09-15T01:46:34Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/4     4            1           5d17h
+2026-09-15T01:46:44Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+FASE 3: Esperar reducción automática a una réplica
+2026-09-15T01:46:45Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         1          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:46:55Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:47:05Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:47:15Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:47:25Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 454%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:47:35Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 300%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:47:46Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 300%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:47:56Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 300%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:48:06Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 300%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:48:16Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 300%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:48:26Z
+NAME       REFERENCE             TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 300%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:48:37Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 1%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:48:47Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 1%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:48:57Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 1%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:49:07Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 1%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:49:17Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 1%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   4/4     4            4           5d17h
+2026-09-15T01:49:27Z
+NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+cpu-demo   Deployment/cpu-demo   cpu: 1%/50%   1         4         4          5d17h
+NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+cpu-demo   1/1     1            1           5d17h
+Name:                                                  cpu-demo
+Namespace:                                             mp2-hpa
+Labels:                                                <none>
+Annotations:                                           <none>
+CreationTimestamp:                                     Wed, 09 Sep 2026 03:41:12 -0500
+Reference:                                             Deployment/cpu-demo
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  1% (1m) / 50%
+Min replicas:                                          1
+Max replicas:                                          4
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods     Value: 4    Period: 15 seconds
+      - Type: Percent  Value: 100  Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 60 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+Deployment pods:       4 current / 1 desired
+Conditions:
+  Type            Status  Reason              Message
+  ----            ------  ------              -------
+  AbleToScale     True    SucceededRescale    the HPA controller was able to update the target scale to 1
+  ScalingActive   True    ValidMetricFound    the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  False   DesiredWithinRange  the desired count is within the acceptable range
+Events:
+  Type     Reason                        Age                    From                       Message
+  ----     ------                        ----                   ----                       -------
+  Warning  FailedGetResourceMetric       5d17h (x8 over 5d17h)  horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Warning  FailedComputeMetricsReplicas  5d17h (x8 over 5d17h)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: no metrics returned from resource metrics API
+  Normal   SuccessfulRescale             5d17h                  horizontal-pod-autoscaler  New size: 4; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             5d17h                  horizontal-pod-autoscaler  New size: 1; reason: All metrics below target
+  Warning  FailedGetResourceMetric       7m56s (x4 over 8m41s)  horizontal-pod-autoscaler  failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Warning  FailedComputeMetricsReplicas  7m56s (x4 over 8m41s)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: unable to get metrics for resource cpu: unable to fetch metrics from resource metrics API: the server is currently unable to handle the request (get pods.metrics.k8s.io)
+  Normal   SuccessfulRescale             2m56s                  horizontal-pod-autoscaler  New size: 4; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             10s                    horizontal-pod-autoscaler  New size: 1; reason: All metrics below target
+PASS: HPA local creció hasta cuatro y regresó a una réplica sin usar kubectl scale.
