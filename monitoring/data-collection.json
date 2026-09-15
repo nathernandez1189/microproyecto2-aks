@@ -1,0 +1,7 @@
+{
+  "interval": "1m",
+  "namespaceFilteringMode": "Include",
+  "namespaces": ["microproyecto2"],
+  "enableContainerLogV2": true,
+  "streams": ["Microsoft-ContainerInsights-Group-Default"]
+}

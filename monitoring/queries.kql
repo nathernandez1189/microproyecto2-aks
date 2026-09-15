@@ -1,0 +1,35 @@
+// Run each query separately in the Log Analytics workspace assigned to this AKS.
+// 1. Structured requests and latency. Does not contain image contents.
+ContainerLogV2
+| where TimeGenerated > ago(1h)
+| where PodNamespace == "microproyecto2"
+| extend entry = parse_json(tostring(LogMessage))
+| where tostring(entry.event) == "http_request"
+| project TimeGenerated, PodName, app=tostring(entry.app), path=tostring(entry.path),
+          status=toint(entry.status), duration_ms=todouble(entry.duration_ms),
+          request_id=tostring(entry.request_id)
+| order by TimeGenerated desc
+
+// 2. Throughput and p95 latency grouped by application and minute.
+ContainerLogV2
+| where TimeGenerated > ago(1h) and PodNamespace == "microproyecto2"
+| extend entry = parse_json(tostring(LogMessage))
+| where tostring(entry.event) == "http_request"
+| summarize requests=count(), errors5xx=countif(toint(entry.status) >= 500),
+            rejected4xx=countif(toint(entry.status) between (400 .. 499)),
+            p95_ms=percentile(todouble(entry.duration_ms),95)
+  by bin(TimeGenerated,1m), app=tostring(entry.app)
+| order by TimeGenerated asc
+
+// 3. Restart count and Pod state from the latest inventory observation.
+KubePodInventory
+| where TimeGenerated > ago(1h) and Namespace == "microproyecto2"
+| summarize arg_max(TimeGenerated, *) by ClusterId, Name, ContainerName
+| project TimeGenerated, Name, ContainerName, PodStatus, ContainerStatus,
+          ContainerRestartCount, Computer
+
+// 4. Recent warning events for this namespace (when collected).
+KubeEvents
+| where TimeGenerated > ago(1h) and Namespace == "microproyecto2" and KubeEventType == "Warning"
+| project TimeGenerated, Name, Reason, Message
+| order by TimeGenerated desc
